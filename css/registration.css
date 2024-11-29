@@ -1,0 +1,53 @@
+body {
+    background-color: #DBDBDBDB;
+    color: #0B3A99;
+    margin: 0;
+    padding: 0;
+}
+
+header > :nth-child(-n+3) img{
+    width: 50px;
+    height: auto;
+    display: inline-block;
+}
+
+body > header {
+    display: flex;
+    justify-content: space-between; /*Spazio gli elementi orizzontalmente*/
+}
+
+body > header > figure {
+    margin: 0; /*Rimuovo i margini di default del <figure>*/
+}
+
+body > header > button {
+    padding: 0;
+    margin: 0;
+    background: none; /*Rimuovo lo sfondo di default del bottone*/
+    border: none; /*Rimuovo il bordo di default*/
+    cursor: pointer;
+
+}
+
+body > header > button > img {
+    width: 50px;
+    height: auto;
+}
+
+body > nav > ul {
+    display: inline-block;
+    list-style-type: none; /* Rimuove i pallini della lista */
+    padding: 0; 
+    margin: 0; 
+}
+
+body > nav > ul > li {
+    display: inline;
+    margin-right: 500px;
+}
+
+body > nav > ul > li > a {
+    text-decoration: none; /* Rimuovo la sottolineatura */
+    color: #0B3A99;
+}
+
