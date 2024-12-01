@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byte & Buy</title>
+  <link rel="stylesheet" href="css/seller.css">
+</head>
+<body>
+  
+  <header>
+    <div class="header-top">
+      <div class="logoContainer">
+        <img src="img/logo.png" alt="Cloud" class="Cloud">
+        <img src="img/byte&buy.jpg" alt="Byte&Buy" class="ByteAndBuy">
+      </div>
+      <nav class="nav-icons">
+        <img src="img/notification.png" alt="Notifications" class="icon">
+        <img src="img/shopping-cart.png" alt="Cart" class="icon">
+        <img src="img/user.png" alt="User" class="icon">
+      </nav>
+    </div>
+
+    <div class="header-bottom">
+      <div class="menu-button">
+        <button class="menu-icon" onclick="toggleMenu()">
+          <img src="img/menu.png" alt="Menu Icon">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <div id="sidebar-menu" class="sidebar">
+    <h2 class="welcome">Benvenuto Byte&Buyer!</h2>
+    <ul class="menu-list">
+      <li class="menu-item">
+        <p>Gestione Saldo</p>
+        <button class="arrow-button">
+          <img src="img/right_arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </button>
+      </li>
+      <li class="menu-item">
+        <p>Tracking</p>
+        <button class="arrow-button">
+          <img src="img/right_arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </button>
+      </li>
+      <li class="menu-item">
+        <p>Vendi subito</p>
+        <button class="arrow-button">
+          <img src="img/right_arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </button>
+      </li>
+      <li class="menu-item">
+        <p>Feedback</p>
+        <button class="arrow-button">
+          <img src="img/right_arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="js/showSideBar.js"></script>
+</body>
+</html>
