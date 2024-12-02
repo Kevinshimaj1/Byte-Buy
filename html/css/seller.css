@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #dbdbdb;
+}
+
+header {
+  width: 100%;
+  background-color: #dbdbdb;
+  border-bottom: 1px solid black;
+  z-index: 999;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: black solid 1px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.Cloud {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+.ByteAndBuy {
+  width: 36px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons .icon {
+  width: 28px;
+  height: 28px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 1px solid #ccc;
+}
+
+.menu-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 32px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #f0f0f0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar > ul > li > p {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000080;
+}
+
+.sidebar > ul {
+  background-color: #dbdbdb;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.welcome {
+  background-color: #000080;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  cursor: default;
+}
+
+.arrow-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+}
