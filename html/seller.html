@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,58 +9,59 @@
 <body>
   
   <header>
-    <div class="header-top">
-      <div class="logoContainer">
-        <img src="img/logo.png" alt="Cloud" class="Cloud">
-        <img src="img/byte&buy.jpg" alt="Byte&Buy" class="ByteAndBuy">
-      </div>
-      <nav class="nav-icons">
-        <img src="img/notification.png" alt="Notifications" class="icon">
-        <img src="img/shopping-cart.png" alt="Cart" class="icon">
-        <img src="img/user.png" alt="User" class="icon">
+    <section>
+      <figure>
+        <img src="img/logo.png" alt="Logo Cloud">
+        <img src="img/byte&buy.jpg" alt="Logo Byte&Buy">
+      </figure>
+      <nav>
+        <ul>
+          <li><a href="#"><img src="img/notification.png" alt="Notifiche"></a></li>
+          <li><a href="#"><img src="img/shopping-cart.png" alt="Carrello"></a></li>
+          <li><a href="#"><img src="img/user.png" alt="Profilo Utente"></a></li>
+        </ul>
       </nav>
-    </div>
+    </section>
 
-    <div class="header-bottom">
-      <div class="menu-button">
-        <button class="menu-icon" onclick="toggleMenu()">
-          <img src="img/menu.png" alt="Menu Icon">
-        </button>
-      </div>
-    </div>
+    <nav>
+      <button aria-label="Apri menu" onclick="toggleMenu()">
+        <img src="img/menu.png" alt="Icona Menu">
+      </button>
+    </nav>
   </header>
 
-  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+  <section onclick="toggleMenu()">
+  </section>
 
-  <div id="sidebar-menu" class="sidebar">
-    <h2 class="welcome">Benvenuto Byte&Buyer!</h2>
-    <ul class="menu-list">
-      <li class="menu-item">
-        <p>Gestione Saldo</p>
-        <button class="arrow-button">
-          <img src="img/right_arrow.png" alt="Arrow Icon" class="arrow-icon">
-        </button>
+  <aside aria-label="Navigazione laterale">
+    <h2>Benvenuto Byte&Buyer!</h2>
+    <ul>
+      <li>
+        <a href="#">
+          <span>Gestione Saldo</span>
+          <img src="img/right_arrow.png" alt="Vai a Gestione Saldo">
+        </a>
       </li>
-      <li class="menu-item">
-        <p>Tracking</p>
-        <button class="arrow-button">
-          <img src="img/right_arrow.png" alt="Arrow Icon" class="arrow-icon">
-        </button>
+      <li>
+        <a href="#">
+          <span>Tracking</span>
+          <img src="img/right_arrow.png" alt="Vai a Tracking">
+        </a>
       </li>
-      <li class="menu-item">
-        <p>Vendi subito</p>
-        <button class="arrow-button">
-          <img src="img/right_arrow.png" alt="Arrow Icon" class="arrow-icon">
-        </button>
+      <li>
+        <a href="#">
+          <span>Vendi Subito</span>
+          <img src="img/right_arrow.png" alt="Vai a Vendi Subito">
+        </a>
       </li>
-      <li class="menu-item">
-        <p>Feedback</p>
-        <button class="arrow-button">
-          <img src="img/right_arrow.png" alt="Arrow Icon" class="arrow-icon">
-        </button>
+      <li>
+        <a href="#">
+          <span>Feedback</span>
+          <img src="img/right_arrow.png" alt="Vai a Feedback">
+        </a>
       </li>
     </ul>
-  </div>
+  </aside>
 
   <script src="js/showSideBar.js"></script>
 </body>
