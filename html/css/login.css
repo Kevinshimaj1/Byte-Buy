@@ -1,0 +1,142 @@
+/* General Style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #DBDBDB;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DBDBDB;
+    padding: 10px 20px;
+}
+
+header div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header img {
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    border: 1px solid #000;
+}
+
+nav button {
+    background-color: #DBDBDB;
+    color: #0B3A99;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    width: 50%; /* Due pulsanti equamente divisi */
+    text-align: center;
+}
+
+nav button:first-child {
+    background-color: #0B3A99;
+    color: #DBDBDB;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    background: #DBDBDB;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    box-shadow: none; /* Rimosso bordo nero */
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+form ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative; /* Permette di posizionare l'immagine accanto all'input */
+}
+
+li + li {
+    margin-top: 20px; /* Aggiunge spazio sopra al secondo <li> */
+}
+
+form ul li label {
+    font-size: 16px;
+    color: #0B3A99;
+    font-weight: bold;
+}
+
+form ul li input {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+
+form ul li div {
+    display: flex;
+    align-items: center;
+}
+
+form ul li div input {
+    width: 90%;
+    padding: 10px; /* Spaziatura interna per rendere l'input più leggibile */
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+form ul li div img {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+form button {
+    width: auto; /* Permette al bottone di avere una larghezza basata sul contenuto */
+    padding: 10px 20px;
+    margin: 10px auto 0; /* auto: centrato orizzontalmente */
+    display: block; /* Per forzare il centramento tramite margin auto */
+    background-color: #0B3A99; 
+    color: white; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center; 
+}
+
