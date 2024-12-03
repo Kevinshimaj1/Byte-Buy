@@ -1,18 +1,15 @@
-/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Stili Generali */
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
   background-color: #dbdbdb;
 }
 
-/* Stili per l'Header */
 header {
   width: 100%;
   background-color: #dbdbdb;
@@ -61,7 +58,6 @@ header > section > nav > ul > li > a > img {
   cursor: pointer;
 }
 
-/* Stili per il Bottone del Menu */
 header > nav {
   display: flex;
   align-items: center;
@@ -86,11 +82,10 @@ header > nav > button > img {
   display: block;
 }
 
-/* Stili per il Menu Laterale */
 aside[aria-label="Navigazione laterale"] {
   position: fixed;
   top: 0;
-  left: -300px; /* Nascosto di default */
+  left: -300px;
   width: 300px;
   height: 100%;
   background-color: #f0f0f0;
@@ -102,12 +97,10 @@ aside[aria-label="Navigazione laterale"] {
   padding: 0;
 }
 
-/* Menu visibile quando data-visible="true" */
 aside[aria-label="Navigazione laterale"][data-visible="true"] {
   left: 0;
 }
 
-/* Stili per l'Overlay */
 section[onclick="toggleMenu()"] {
   position: fixed;
   top: 0;
@@ -116,23 +109,21 @@ section[onclick="toggleMenu()"] {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 998;
-  display: none; /* Nascosto di default */
+  display: none;
 }
 
 section[onclick="toggleMenu()"][data-visible="true"] {
   display: block;
 }
 
-/* Messaggio di Benvenuto */
 aside > h2 {
-  background-color: #000080;
+  background-color: #0b3a99;
   color: white;
   text-align: center;
   padding: 15px;
   font-size: 18px;
 }
 
-/* Stili per la Lista del Menu */
 aside > ul {
   list-style: none;
   margin: 0;
@@ -141,11 +132,8 @@ aside > ul {
 }
 
 aside > ul > li {
-  background-color: white;
-}
-
-aside > ul > li > a {
   display: flex;
+  background-color: white;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
@@ -153,6 +141,15 @@ aside > ul > li > a {
   border-bottom: 1px solid #ccc;
   text-decoration: none;
   color: inherit;
+}
+
+aside > ul > li > span {
+  font-weight: bold;
+  color: #0b3a99;
+}
+
+aside > ul > li > a:hover {
+  background-color: #dbdbdb;
 }
 
 aside > ul > li > a > img {
