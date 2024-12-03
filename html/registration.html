@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Interface</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/registration.css" />
+    </head>
+
+    <body>
+        <header>
+
+            <figure>
+                <img src="img/logo.png" alt="Logo Byte&Buy" />
+            </figure><figure>
+                <img src="img/byte&buy.png" alt="Scritta Byte&Buy"/>
+            </figure><button type="button">
+                <img src="img/user.png" alt="Icona del profilo"/>
+            </button>
+            
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">REGISTRATI</a></li> <!--L'ìnterfaccia di default è quella di registrazione -->
+            </ul>
+            <ul>
+                <li><a href="login.html">ACCEDI</a></li>
+            </ul>
+        </nav>
+
+        <form action="#" method="post">
+            <label for="e-mail">E-mail</label>
+            <input type="email" id="e-mail" name="e-mail" placeholder="Inserisci una e-mail valida"/>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Inserisci una password sicura"/>
+                <button type="button" aria-label="Mostra la password">
+                    <img src="img/eye.png"/>
+                </button>
+            </div>
+
+            <label for="conferma-passw">Conferma password</label>
+            <input type="password" id="conferma-passw" name="conferma-passw" />
+
+            <label for="venditore">Venditore</label>
+            <input type="checkbox" id="venditore" name="venditore" value="1">
+
+            <label for="submit"></label>
+            <input type="submit" id="submit" name="submit" value="REGISTRATI"/>
+
+        </form>
+    </body>
+</html>
