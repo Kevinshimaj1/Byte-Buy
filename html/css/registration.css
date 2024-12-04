@@ -1,56 +1,88 @@
-/**REGOLE DI RESET**/
+/** REGOLE DI RESET **/
 body {
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: #DBDBDBDB;
+body {
+    background-color: #DBDBDB;
     color: #0B3A99;
+    font-family: Arial, sans-serif;
 }
 
-header img{
-    width: 50px;
-    height: auto;
-}
-
+/**HEADER**/
 body > header {
     display: flex;
-    justify-content: space-between; /*Spazio gli elementi orizzontalmente*/
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 body > header > figure {
-    margin: 0; /*Rimuovo i margini di default del <figure>*/
+    margin: 0px; /**Rimuovo il margine delle figure**/
 }
 
 body > header > button {
-    background: none; /*Rimuovo lo sfondo di default del bottone*/
-    border: none; /*Rimuovo il bordo di default*/
-    cursor: pointer;
+   padding: 0px; /**Rimuovo il padding del bottone**/
+   background: none; /**Rimuovo lo sfondo del bottone, che è diverso da dbdbdbd**/
+   border:none
+
 }
 
-body > header > button > img {
+body > header > figure img {
+    width: 50px;  /* Imposto la stessa larghezza per tutte le immagini dell'header*/
+    height: auto;
+}
+
+body > header > button img {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+body > header > button img {
     width: 50px;
     height: auto;
 }
 
-body > nav > ul {
-    display: inline-block;
-    list-style-type: none; /* Rimuove i pallini della lista */
-    padding: 0; 
-    margin: 0; 
+/** NAV **/
+body > nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
 }
 
-body > nav > ul > li {
-    display: inline;
-    margin-right: 500px;
+body > nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%; /* La lista occupa tutta la larghezza disponibile */
 }
 
-body > nav > ul > li > a {
-    text-decoration: none; /* Rimuovo la sottolineatura */
-    color: #0B3A99;
+body > nav ul li {
+    flex: 1; /* Ogni elemento occupa lo stesso spazio */
+    text-align: center; /* Centra il testo del link */
 }
 
-body > form > div > button > img {
-    width: 50px;
+body > nav ul li a {
+    text-decoration: none;
+    color: #0B3A99; /* Colore del testo */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
+    border-radius: 5px; /* Aggiunge angoli arrotondati */
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizioni più fluide */
+}
+
+body > nav ul li a:hover {
+    background-color: #0B3A99; /* Colore di sfondo al passaggio del mouse */
+    color: #fff; /* Cambia il colore del testo al passaggio del mouse */
+}
+
+body > nav ul li a:active {
+    background-color: #084C8B; /* Colore di sfondo quando il link è attivo (cliccato) */
 }
