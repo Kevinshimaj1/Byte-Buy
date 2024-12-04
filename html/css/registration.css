@@ -5,39 +5,32 @@ body {
 }
 
 body {
-    background-color: #DBDBDB;
+    background-color: #DBDBDB;  /* Sfondo grigio chiaro */
     color: #0B3A99;
     font-family: Arial, sans-serif;
 }
 
-/**HEADER**/
+/** HEADER **/
 body > header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding: 10px 20px;  /* Aggiunto un po' di spazio interno */
 }
 
 body > header > figure {
-    margin: 0px; /**Rimuovo il margine delle figure**/
+    margin: 0;
 }
 
 body > header > button {
-   padding: 0px; /**Rimuovo il padding del bottone**/
-   background: none; /**Rimuovo lo sfondo del bottone, che è diverso da dbdbdbd**/
-   border:none
-
+    padding: 0;
+    background: none;
+    border: none;
 }
 
 body > header > figure img {
-    width: 50px;  /* Imposto la stessa larghezza per tutte le immagini dell'header*/
+    width: 50px;
     height: auto;
-}
-
-body > header > button img {
-    background: none;
-    border: none;
-    padding: 0;
 }
 
 body > header > button img {
@@ -59,30 +52,110 @@ body > nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    width: 100%; /* La lista occupa tutta la larghezza disponibile */
+    width: 100%;
 }
 
 body > nav ul li {
-    flex: 1; /* Ogni elemento occupa lo stesso spazio */
-    text-align: center; /* Centra il testo del link */
+    flex: 1;
+    text-align: center;
 }
 
 body > nav ul li a {
     text-decoration: none;
-    color: #0B3A99; /* Colore del testo */
+    color: #0B3A99;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
-    border-radius: 5px; /* Aggiunge angoli arrotondati */
+    padding: 10px 15px;
+    border-radius: 5px;
     display: block;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transizioni più fluide */
 }
 
 body > nav ul li a:hover {
-    background-color: #0B3A99; /* Colore di sfondo al passaggio del mouse */
-    color: #fff; /* Cambia il colore del testo al passaggio del mouse */
+    background-color: #0B3A99;
+    color: #fff;
 }
 
 body > nav ul li a:active {
-    background-color: #084C8B; /* Colore di sfondo quando il link è attivo (cliccato) */
+    background-color: #0B3A99;
 }
+
+/** FORM **/
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0B3A99;
+}
+
+/** Gestione dei campi di input **/
+form input[type="email"],
+form input[type="password"],
+form input[type="checkbox"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;  /* Maggiore spazio nei campi */
+    margin-bottom: 20px;  /* Maggiore spazio tra gli input */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;  /* Include padding e border nelle dimensioni dell'input */
+}
+
+form input[type="checkbox"] {
+    width: auto;
+}
+
+form input[type="submit"] {
+    background-color: #0B3A99;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0A2F8C;
+}
+
+/** Icona per "Mostra Password" **/
+form > label + input[type="password"] {
+    position: relative;
+    padding-right: 40px;  /* Distanza per l'icona */
+}
+
+form > label + input[type="password"] + button[type="button"] {
+    position: absolute;
+    right: 10px; /* Posizionamento a destra dell'input */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+form button[type="button"] img {
+    width: 24px; /* Aumento la dimensione dell'icona */
+    height: auto;
+}
+
+/** Stili per l'input di password **/
+form input[type="password"] {
+    padding-right: 40px; /* Aggiungi spazio sufficiente per l'icona */
+}
+
+/** Etichetta per il checkbox (spazio tra l'input e la label) **/
+form input[type="checkbox"] + label {
+    display: inline-block;
+    margin-left: 5px;
+}
+
