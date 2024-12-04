@@ -10,76 +10,93 @@ html, body {
   background-color: #dbdbdb;
 }
 
-header {
+body > header {
   width: 100%;
   background-color: #dbdbdb;
   border-bottom: 1px solid black;
   z-index: 999;
-}
-
-header > section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   border-bottom: 1px solid black;
 }
 
-header > section > figure {
+header > figure {
   display: flex;
   align-items: center;
-}
-
-header > section > figure > img:first-child {
-  width: 36px;
-  height: 36px;
   margin-right: 10px;
 }
 
-header > section > figure > img:last-child {
+header > figure > img {
+  display: block;
+}
+
+header > figure:first-of-type > img {
+  width: 50px;
+  height: 50px;
+}
+
+header > figure:last-of-type > img {
   width: 36px;
   height: 32px;
-  margin-right: 10px;
 }
 
-header > section > nav > ul {
+header > nav {
+  margin-left: auto;
+}
+
+header > nav > ul {
   display: flex;
   align-items: center;
   list-style: none;
 }
 
-header > section > nav > ul > li {
+header > nav > ul > li {
   margin-left: 20px;
 }
 
-header > section > nav > ul > li > a > img {
+header > nav > ul > li > a > img {
   width: 28px;
   height: 28px;
   cursor: pointer;
 }
 
-header > nav {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  border-top: 1px solid #ccc;
-}
-
-header > nav > button {
+body > nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 32px;
-  height: 24px;
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+}
+
+ body > nav > button {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-header > nav > button > img {
+body > nav > button > img {
   width: 24px;
   height: 24px;
+}
+
+main > header > h2 {
+  color: #0b3a99;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+main {
   display: block;
+  border-bottom: none;
+}
+
+header + main {
+  margin-top: 20px;
 }
 
 aside[aria-label="Navigazione laterale"] {
@@ -101,21 +118,6 @@ aside[aria-label="Navigazione laterale"][data-visible="true"] {
   left: 0;
 }
 
-section[onclick="toggleMenu()"] {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998;
-  display: none;
-}
-
-section[onclick="toggleMenu()"][data-visible="true"] {
-  display: block;
-}
-
 aside > h2 {
   background-color: #0b3a99;
   color: white;
@@ -133,14 +135,11 @@ aside > ul {
 
 aside > ul > li {
   display: flex;
-  background-color: white;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 15px 20px;
-  font-size: 16px;
+  background-color: white;
   border-bottom: 1px solid #ccc;
-  text-decoration: none;
-  color: inherit;
 }
 
 aside > ul > li > span {
@@ -148,11 +147,41 @@ aside > ul > li > span {
   color: #0b3a99;
 }
 
-aside > ul > li > a:hover {
+aside > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+aside > ul > li > a > figure {
+  width: 24px;
+  height: 24px;
+}
+
+aside > ul > li > a > figure > img {
+  width: 100%;
+  height: auto;
+}
+
+aside > ul > li:hover {
   background-color: #dbdbdb;
 }
 
-aside > ul > li > a > img {
-  width: 24px;
-  height: 24px;
+aside > ul > li > a:hover > figure > img {
+  filter: brightness(0.8);
+}
+
+section[onclick="toggleMenu()"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+section[onclick="toggleMenu()"][data-visible="true"] {
+  display: block;
 }
