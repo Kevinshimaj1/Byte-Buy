@@ -1,6 +1,7 @@
 /* General Style */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #DBDBDB;
     display: flex;
@@ -15,37 +16,52 @@ header {
     padding: 10px 20px;
 }
 
-header div:first-child {
+header figure {
     display: flex;
     align-items: center;
+    height: 60px;
     gap: 10px;
 }
 
-header img {
+header figure img {
     height: 40px;
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0;
     border: 1px solid #000;
 }
-
-nav button {
-    background-color: #DBDBDB;
-    color: #0B3A99;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-    width: 50%; /* Due pulsanti equamente divisi */
-    text-align: center;
+nav ul {
+    display: flex; /* Utilizzo di Flexbox */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* La lista occupa l'intera larghezza */
 }
 
-nav button:first-child {
-    background-color: #0B3A99;
+nav ul li {
+    flex: 1; /* Ogni elemento figlio occupa lo stesso spazio */
+    text-align: center; /* Centra il contenuto testuale */
+    list-style: none; /* Rimuove i punti elenco */
+}
+
+nav ul li a {
+    display: block; /* Rende il link un elemento a blocco */
+    padding: 10px 0; /* Spaziatura interna per i link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li:first-child a {
+    background-color: #0B3A99; /* Stile del primo link */
     color: #DBDBDB;
+}
+
+nav ul li:nth-child(2) a {
+    background-color: #DBDBDB; /* Stile del secondo link */
+    color: #0B3A99;
 }
 
 main {
@@ -65,24 +81,25 @@ form {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    box-shadow: none; /* Rimosso bordo nero */
+    box-shadow: none;
 }
 
 form ul {
     list-style: none;
     padding: 0;
     width: 100%;
+    margin-bottom: 0;
 }
 
 form ul li {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    position: relative; /* Permette di posizionare l'immagine accanto all'input */
+    position: relative;
 }
 
-li + li {
-    margin-top: 20px; /* Aggiunge spazio sopra al secondo <li> */
+form ul li:first-child {
+    margin-bottom: 10px;
 }
 
 form ul li label {
@@ -100,7 +117,6 @@ form ul li input {
     box-sizing: border-box;
 }
 
-
 form ul li div {
     display: flex;
     align-items: center;
@@ -116,13 +132,20 @@ form ul li div input {
     position: relative;
 }
 
-form ul li div img {
+form ul li div figure {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 5px;
     top: 50%;
+    cursor: pointer;
+}
+
+form ul li div figure img {
     width: 24px;
     height: 24px;
-    cursor: pointer;
 }
 
 form button {
@@ -130,13 +153,26 @@ form button {
     padding: 10px 20px;
     margin: 10px auto 0; /* auto: centrato orizzontalmente */
     display: block; /* Per forzare il centramento tramite margin auto */
-    background-color: #0B3A99; 
-    color: white; 
-    border: 1px solid black; 
-    border-radius: 5px; 
+    background-color: #0B3A99;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    text-align: center; 
+    text-align: center;
+    margin-top: 0;
 }
 
+/* Figure Styles */
+figure {
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
