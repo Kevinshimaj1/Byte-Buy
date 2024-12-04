@@ -5,8 +5,6 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
   background-color: #dbdbdb;
@@ -19,51 +17,55 @@ header {
   z-index: 999;
 }
 
-.header-top {
+header > section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-bottom: black solid 1px;
+  border-bottom: 1px solid black;
 }
 
-.logoContainer {
+header > section > figure {
   display: flex;
   align-items: center;
 }
 
-.Cloud {
+header > section > figure > img:first-child {
   width: 36px;
   height: 36px;
   margin-right: 10px;
 }
 
-.ByteAndBuy {
+header > section > figure > img:last-child {
   width: 36px;
   height: 32px;
   margin-right: 10px;
 }
 
-.nav-icons {
+header > section > nav > ul {
   display: flex;
   align-items: center;
+  list-style: none;
 }
 
-.nav-icons .icon {
+header > section > nav > ul > li {
+  margin-left: 20px;
+}
+
+header > section > nav > ul > li > a > img {
   width: 28px;
   height: 28px;
-  margin-left: 20px;
   cursor: pointer;
 }
 
-.header-bottom {
+header > nav {
   display: flex;
   align-items: center;
   padding: 10px 20px;
   border-top: 1px solid #ccc;
 }
 
-.menu-button {
+header > nav > button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -74,13 +76,13 @@ header {
   cursor: pointer;
 }
 
-.menu-icon img {
+header > nav > button > img {
   width: 24px;
   height: 24px;
   display: block;
 }
 
-.sidebar {
+aside[aria-label="Navigazione laterale"] {
   position: fixed;
   top: 0;
   left: -300px;
@@ -95,22 +97,11 @@ header {
   padding: 0;
 }
 
-.sidebar.active {
+aside[aria-label="Navigazione laterale"][data-visible="true"] {
   left: 0;
 }
 
-.sidebar > ul > li > p {
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #000080;
-}
-
-.sidebar > ul {
-  background-color: #dbdbdb;
-}
-
-.overlay {
+section[onclick="toggleMenu()"] {
   position: fixed;
   top: 0;
   left: 0;
@@ -121,42 +112,47 @@ header {
   display: none;
 }
 
-.overlay.show {
+section[onclick="toggleMenu()"][data-visible="true"] {
   display: block;
 }
 
-.welcome {
-  background-color: #000080;
+aside > h2 {
+  background-color: #0b3a99;
   color: white;
   text-align: center;
   padding: 15px;
   font-size: 18px;
 }
 
-.menu-list {
+aside > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  background-color: #dbdbdb;
 }
 
-.menu-item {
+aside > ul > li {
   display: flex;
+  background-color: white;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
   font-size: 16px;
   border-bottom: 1px solid #ccc;
-  background-color: white;
-  cursor: default;
+  text-decoration: none;
+  color: inherit;
 }
 
-.arrow-button {
-  background: none;
-  border: none;
-  cursor: pointer;
+aside > ul > li > span {
+  font-weight: bold;
+  color: #0b3a99;
 }
 
-.arrow-icon {
+aside > ul > li > a:hover {
+  background-color: #dbdbdb;
+}
+
+aside > ul > li > a > img {
   width: 24px;
   height: 24px;
 }
