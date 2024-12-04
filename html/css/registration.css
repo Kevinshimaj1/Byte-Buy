@@ -12,6 +12,7 @@ body{
 header > :nth-child(-n+3) img{
     width: 50px;
     height: auto;
+    background-color: #DBDBDBDB;
 }
 
 body > header {
